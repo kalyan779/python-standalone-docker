@@ -1,11 +1,11 @@
 FROM alpine:3.11
 
 #Install Python3
-RUN apk add Python3
+RUN apk add python3
 #Install flask
-RUN pip3 Install flask
+RUN pip3 install flask
 #Install Redis
-RUN pip3 Install Redis
+RUN pip3 install Redis
 #Copy your code to docker image
 WORKDIR /app
 COPY app.py .
@@ -13,4 +13,4 @@ COPY app.py .
 EXPOSE 5000
 
 #Start Python app at docker runtime
-CMD Python3 app.py
+CMD python3 app.py
